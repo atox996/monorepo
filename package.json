@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "packageManager": "pnpm@7.1.0",
+  "scripts": {
+    "start": "turbo run start",
+    "build": "turbo run build",
+    "postinstall": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@my/tsconfig": "workspace:*",
+    "simple-git-hooks": "^2.11.1",
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx --no -- commitlint --edit $1"
+  }
+}
