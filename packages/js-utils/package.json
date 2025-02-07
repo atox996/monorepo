@@ -1,12 +1,12 @@
 {
   "name": "@my/js-utils",
-  "version": "1.0.0",
   "type": "module",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "pnpm build",
+    "start": "turbo run build",
     "build": "vite build && tsc",
-    "postinstall": "pnpm build"
+    "postinstall": "turbo run build"
   }
 }
