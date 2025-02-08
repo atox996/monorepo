@@ -1,12 +1,14 @@
+<script lang="ts" setup>
+import { greet } from '@my/js-utils'
+
+console.log(greet('Web App'))
+</script>
+
 <template>
   <div id="app">
     <h1>Hello, Web App!</h1>
   </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>
 
 <style>
 #app {

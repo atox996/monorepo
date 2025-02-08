@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "start": "turbo run build",
     "build": "vite build && tsc",
-    "postinstall": "turbo run build"
+    "postinstall": "pnpm build"
   }
 }
