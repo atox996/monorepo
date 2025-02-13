@@ -9,6 +9,11 @@ const extraFileExtensions = [".vue"];
 
 export default tseslint.config(
   { ignores: ["**/dist/**"] },
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
+  tseslint.configs.stylistic,
+  pluginVue.configs["flat/recommended"],
+  prettierConfig,
   {
     languageOptions: {
       globals: {
@@ -41,9 +46,4 @@ export default tseslint.config(
       "vue/multi-word-component-names": "off",
     },
   },
-  eslint.configs.recommended,
-  tseslint.configs.recommended,
-  tseslint.configs.stylistic,
-  pluginVue.configs["flat/recommended"],
-  prettierConfig,
 );
