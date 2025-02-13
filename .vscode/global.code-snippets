@@ -1,0 +1,14 @@
+{
+  "vue-script-setup": {
+    "scope": "vue",
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "  <section>${1:Page}</section>",
+      "</template>",
+      "<script lang=\"ts\" setup>$2</script>",
+      "<style lang=\"less\" scoped>$3</style>",
+      "",
+    ],
+  },
+}

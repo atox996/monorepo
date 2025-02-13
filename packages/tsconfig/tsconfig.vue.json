@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "moduleDetection": "force",
-    "verbatimModuleSyntax": true
-  }
-}

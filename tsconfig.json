@@ -1,3 +1,7 @@
 {
-  "extends": "@my/tsconfig/tsconfig.json"
+  "extends": "@my/configs/tsconfig.json",
+  "compilerOptions": {
+    "checkJs": true
+  },
+  "include": ["./*.js"]
 }

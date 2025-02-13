@@ -1,8 +1,3 @@
 {
-  "extends": "@my/tsconfig/tsconfig.lib.json",
-  "compilerOptions": {
-    "emitDeclarationOnly": true,
-    "outDir": "dist"
-  },
-  "include": ["src"]
+  "extends": "@my/configs/tsconfig.json"
 }

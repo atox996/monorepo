@@ -5,21 +5,40 @@
   "scripts": {
     "start": "turbo run start",
     "build": "turbo run build",
-    "lint": "eslint . --fix && vue-tsc --noEmit",
+    "lint": "pnpm prettier && pnpm stylelint && pnpm eslint",
+    "eslint": "eslint . --cache --fix",
+    "prettier": "prettier . --cache --write --ignore-unknown",
+    "stylelint": "stylelint \"**/*.{css,less,vue}\" --cache --fix",
     "postinstall": "simple-git-hooks"
   },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.1.1",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "@my/tsconfig": "workspace:*",
-    "eslint": "^9.19.0",
+    "@eslint/js": "^9.20.0",
+    "@my/configs": "workspace:*",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.15.0",
     "lint-staged": "^15.4.3",
+    "postcss": "^8.5.2",
+    "postcss-html": "^1.8.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^3.5.0",
     "simple-git-hooks": "^2.11.1",
-    "turbo": "^2.4.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-standard": "^37.0.0",
+    "turbo": "^2.4.2",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0",
     "vite": "^6.1.0",
-    "vue-tsc": "^2.2.0"
+    "vue-eslint-parser": "^9.4.3"
   },
   "commitlint": {
     "extends": [
@@ -31,7 +50,12 @@
     "commit-msg": "npx --no -- commitlint --edit $1"
   },
   "lint-staged": {
-    "*": "eslint --fix",
-    "*.{ts,tsx,vue}": "bash -c vue-tsc --noEmit"
+    "*": [
+      "prettier --cache --write --ignore-unknown",
+      "eslint --cache --fix"
+    ],
+    "**/*.{css,less,vue}": [
+      "stylelint --cache --fix"
+    ]
   }
 }
