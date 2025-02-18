@@ -1,5 +1,6 @@
 import { execSync } from "node:child_process";
 import { existsSync } from "node:fs";
+
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
 

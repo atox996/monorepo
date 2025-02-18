@@ -1,5 +1,6 @@
 import eslint from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import pluginVue from "eslint-plugin-vue";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -14,6 +15,15 @@ export default tseslint.config(
   tseslint.configs.stylistic,
   pluginVue.configs["flat/recommended"],
   prettierConfig,
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+    },
+  },
   {
     languageOptions: {
       globals: {
