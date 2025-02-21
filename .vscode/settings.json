@@ -18,5 +18,7 @@
     "source.organizeImports": "never"
   },
 
-  "stylelint.validate": ["css", "less", "vue"]
+  "stylelint.validate": ["css", "less", "vue"],
+
+  "explorer.excludeGitIgnore": true
 }
